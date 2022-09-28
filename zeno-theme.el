@@ -45,9 +45,14 @@
   :type 'boolean
   :group 'zeno-theme)
 
+(defcustom zeno-theme-dark-bg nil
+  "If non-nil, the background will be close to black."
+  :group 'zeno-theme
+  :type 'boolean)
+
 (let
     (
-     (bg                     "#282A36")
+     (bg                     (if zeno-theme-dark-bg "#17181b" "#282A36"))
      (fg                     "#E8F0FF")
      (seperator              "#1F2029")
      (cursor                 "#F8F8F0")
